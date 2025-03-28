@@ -77,7 +77,7 @@ python -c "import requests; print(requests.__version__)"
 
 ***Reflection***
 
-*This was a really interesting issue that started with a vague error message and turned out to be a mix of environment, versioning, and system policy.
+_This was a really interesting issue that started with a vague error message and turned out to be a mix of environment, versioning, and system policy.
 
 TIL: Sometimes, your code isn’t the problem — your environment is.
-Learning to navigate pip, Python versions, and system policies is just as important as writing Python itself.*
+Learning to navigate pip, Python versions, and system policies is just as important as writing Python itself._
