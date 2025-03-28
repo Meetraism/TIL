@@ -1,6 +1,6 @@
-** TIL — Fixing "Missing dependencies for SOCKS support" when installing requests in Python 3.12 venv **
+**TIL — Fixing "Missing dependencies for SOCKS support" when installing requests in Python 3.12 venv**
 
-** The Problem **
+**The Problem**
 
 While working on a SQL injection automation script in Python, I created a virtual environment using:
 ```
@@ -25,14 +25,14 @@ pip install requests --no-deps
 Nothing worked.
 Even ```--break-system-packages``` didn’t help. The venv was completely stuck.
 
-** Cause (from what I learned) **
+**Cause (from what I learned)**
 
 - The requests package optionally installs PySocks to support SOCKS proxies.
 - PySocks includes native (C-based) components that must be compiled.
 - My venv was missing build tools and dev headers like libffi-dev, libssl-dev, or python3-dev.
 - It wasn’t requests that was broken — it was my environment setup.
 
-** What About Installing Globally? **
+**What About Installing Globally?**
 
 Out of curiosity, I also tried installing requests globally (outside the venv):
 ```
@@ -75,7 +75,7 @@ python -c "import requests; print(requests.__version__)"
 # ✅ Output: 2.31.0
 ```
 
-*** Reflection ***
+***Reflection***
 
 *This was a really interesting issue that started with a vague error message and turned out to be a mix of environment, versioning, and system policy.
 
